@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/downloadBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Click to Download"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="200dp"/>
+    <Button
+        android:id="@+id/uploadBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Click to Upload"
+        android:layout_below="@+id/downloadBtn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+</RelativeLayout>

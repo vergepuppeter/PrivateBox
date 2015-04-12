@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/urlPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/hint_url"
+        android:layout_marginTop="200dp"/>
+
+    <Button
+        android:id="@+id/playAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play Audio"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>

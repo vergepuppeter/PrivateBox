@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.privatebox.com.privatebox" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21"/>
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.privatebox.com.privatebox.Activity.AudioActivity">
+        </activity>
+        <activity
+            android:name="app.privatebox.com.privatebox.Activity.GridViewActivity">
+        </activity>
+        <activity
+            android:name="app.privatebox.com.privatebox.Activity.ValidationFormActivity">
+        </activity>
+        <activity
+            android:name="app.privatebox.com.privatebox.Activity.ListViewActivity">
+        </activity>
+        <activity
+            android:name="app.privatebox.com.privatebox.Activity.TakePictureActivity">
+        </activity>
+        <activity
+            android:name="app.privatebox.com.privatebox.Activity.UploadDownloadActivity">
+        </activity>
+    </application>
+
+</manifest>

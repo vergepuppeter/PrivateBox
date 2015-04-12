@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PrivateBox</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="placeholder">PlaceHolder</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="gridview">GridView</string>
+    <string name="listview">ListView</string>
+    <string name="btn_validation">Button And Validation</string>
+    <string name="error_empty">This field cannot be empty</string>
+    <string name="error_phone">Wrong Email format</string>
+    <string name="error_email">Wrong Phone format</string>
+    <string name="email_hint">Enter email address</string>
+    <string name="hint_phone">Enter phone number</string>
+    <string name="btn_validate">Validate Me</string>
+    <string name="hint_name">Enter Your Name</string>
+    <string name="hint_url">Enter URL .mp3</string>
+    <string name="play_audio">Play Audio/Video</string>
+    <string name="audio_btn">audio</string>
+    <string name="validate_btn">Validate</string>
+</resources>
