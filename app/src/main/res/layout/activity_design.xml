@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="app.privatebox.com.privatebox.Activity.DesignActivity">
+
+    <!-- LinearLayout ni kalau korg nak letak view sebaris-sebaris. Kena set orientation dahulu (horizontal- kiri ke kanan, vertical - atas ke bawah)-->
+    <!-- xxdp - ni namanya density pixel. Guna untuk set size-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            />
+        </LinearLayout>
+
+
+
+    <TextView android:text="First text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="200dp"/>
+
+    <TextView android:text="Second Text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"/>
+
+    <TextView android:text="third Text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:id="@+id/text3"
+        android:layout_marginTop="200dp"
+        />
+
+    <TextView android:text="First text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text4"
+        android:layout_toLeftOf="@+id/text5"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/text3"
+        android:layout_marginRight="30dp"/>
+
+    <TextView android:text="Second Text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text5"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text3"
+        android:layout_marginTop="50dp"/>
+
+    <TextView android:text="third Text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text6"
+        android:layout_toRightOf="@+id/text5"
+        android:layout_below="@+id/text3"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <!-- android:layout_alignParentLeft * Untuk letak dia kat belah kiri -->
+    <!-- android:layout_alignParentRight * Untuk letak dia kat belah kanan -->
+    <!-- android:layout_centerHorizontal * Untuk letak dia kat tengah garisan horizontal -->
+    <!-- android:layout_toLeftOf * Untuk letak dia kat sebelah kiri view yang lain berdasarkan id -->
+    <!-- android:layout_toRightOf * Untuk letak dia kat sebelah kanan view yang lain berdasarkan id -->
+    <!-- android:layout_below * Untuk letak dia kat sebelah bawah view yang lain berdasarkan id -->
+    <!-- android:layout_margin * Untuk letak space kat semua bahagian. (kiri,kanan,atas,bawah) -->
+    <!-- android:layout_marginRight * Untuk letak space kat bahagian kanan -->
+    <!-- android:layout_marginLeft * Untuk letak space kat bahagian kiri -->
+    <!-- android:layout_marginTop * Untuk letak space kat bahagian atas -->
+    <!-- android:layout_marginBottom * Untuk letak space kat bahagian atas -->
+
+</RelativeLayout>

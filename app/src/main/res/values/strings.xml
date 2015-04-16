@@ -19,4 +19,7 @@
     <string name="play_audio">Play Audio/Video</string>
     <string name="audio_btn">audio</string>
     <string name="validate_btn">Validate</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_basic">BasicActivity</string>
+    <string name="title_activity_design">DesignActivity</string>
 </resources>

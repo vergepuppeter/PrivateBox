@@ -29,8 +29,11 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 import app.privatebox.com.privatebox.Activity.AudioActivity;
+import app.privatebox.com.privatebox.Activity.BasicActivity;
+import app.privatebox.com.privatebox.Activity.DesignActivity;
 import app.privatebox.com.privatebox.Activity.GridViewActivity;
 import app.privatebox.com.privatebox.Activity.ListViewActivity;
+import app.privatebox.com.privatebox.Activity.MapsActivity;
 import app.privatebox.com.privatebox.Activity.TakePictureActivity;
 import app.privatebox.com.privatebox.Activity.UploadDownloadActivity;
 import app.privatebox.com.privatebox.Activity.ValidationFormActivity;
@@ -50,8 +53,10 @@ public class MainActivity extends ActionBarActivity {
     private FragmentValidation fValidation;
     private ListContentAdapter adapter;
     private ListView listView;
-    private final String[] menu = {"GridView","ListView","Validation", "Play Local/Streaming Audio", "Take Picture",
-    "Upload/Download"};
+    private final String[] menu = {"[Basic] Back to Basic 1", "[Basic] Back to Basic 2","[Intermediate] GridView","[Intermediate] ListView","[Intermediate] Validation", "[Intermediate] Play Local/Streaming Audio", "[Intermediate] Take Picture",
+    "[Advance] Upload/Download", "[Advance] Google Map"};
+    private final String[] menuDescription = {"BasicActivity", "DesignActivity","GridViewActivity","ListViewActivity","ValidationFormActivity", "AudioActivity", "TakePictureActivity",
+            "UploadDownloadActivity", "MapsActivity"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +65,7 @@ public class MainActivity extends ActionBarActivity {
 
             listView = (ListView)findViewById(R.id.listContent);
 
-            adapter = new ListContentAdapter(this, menu);
+            adapter = new ListContentAdapter(this, menu, menuDescription);
             listView.setAdapter(adapter);
 
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -69,27 +74,39 @@ public class MainActivity extends ActionBarActivity {
                     Intent i;
                     switch (position){
                         case 0:
-                            i = new Intent(MainActivity.this, GridViewActivity.class);
+                            i = new Intent(MainActivity.this, BasicActivity.class);
                             startActivity(i);
                             break;
                         case 1:
-                            i = new Intent(MainActivity.this,ListViewActivity.class);
+                            i = new Intent(MainActivity.this, DesignActivity.class);
                             startActivity(i);
                             break;
                         case 2:
-                            i = new Intent(MainActivity.this, ValidationFormActivity.class);
+                            i = new Intent(MainActivity.this, GridViewActivity.class);
                             startActivity(i);
                             break;
                         case 3:
-                            i = new Intent(MainActivity.this, AudioActivity.class);
+                            i = new Intent(MainActivity.this,ListViewActivity.class);
                             startActivity(i);
                             break;
                         case 4:
-                            i = new Intent(MainActivity.this, TakePictureActivity.class);
+                            i = new Intent(MainActivity.this, ValidationFormActivity.class);
                             startActivity(i);
                             break;
                         case 5:
+                            i = new Intent(MainActivity.this, AudioActivity.class);
+                            startActivity(i);
+                            break;
+                        case 6:
+                            i = new Intent(MainActivity.this, TakePictureActivity.class);
+                            startActivity(i);
+                            break;
+                        case 7:
                             i = new Intent(MainActivity.this, UploadDownloadActivity.class);
+                            startActivity(i);
+                            break;
+                        case 8:
+                            i = new Intent(MainActivity.this, MapsActivity.class);
                             startActivity(i);
                             break;
                     }

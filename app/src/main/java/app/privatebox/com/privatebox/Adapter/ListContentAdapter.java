@@ -18,11 +18,13 @@ import app.privatebox.com.privatebox.R;
 public class ListContentAdapter extends BaseAdapter {
     private String[] items;
     private Context context;
+    private String[] itemsDesc;
 
-    public ListContentAdapter(Context context, String[] items)
+    public ListContentAdapter(Context context, String[] items, String[] itemsDesc)
     {
         this.items = items;
         this.context = context;
+        this.itemsDesc = itemsDesc;
     }
 
     @Override
@@ -47,21 +49,24 @@ public class ListContentAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(context).inflate(R.layout.content_item, parent, false);
             viewHolder = new ViewHolder();
             viewHolder.txt = (TextView)convertView.findViewById(R.id.text_item);
+            viewHolder.txtDesc = (TextView)convertView.findViewById(R.id.desc_item);
             convertView.setTag(viewHolder);
         }
         else
         {
             viewHolder = (ViewHolder)convertView.getTag();
             viewHolder.txt = (TextView)convertView.findViewById(R.id.text_item);
+            viewHolder.txtDesc = (TextView)convertView.findViewById(R.id.desc_item);
         }
 
         viewHolder.txt.setText(items[position]);
+        viewHolder.txtDesc.setText(itemsDesc[position]);
 
         return convertView;
     }
 
     private class ViewHolder
     {
-        private TextView txt;
+        private TextView txt, txtDesc;
     }
 }

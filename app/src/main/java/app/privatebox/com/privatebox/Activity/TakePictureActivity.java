@@ -176,7 +176,7 @@ public class TakePictureActivity extends ActionBarActivity {
                 String picturePath = c.getString(columnIndex);
                 c.close();
                 Bitmap thumbnail = (BitmapFactory.decodeFile(picturePath));
-                Log.w("path of image from gallery......******************.........", picturePath);
+                Log.w("path of image fr", picturePath);
 
                 imageView.setImageBitmap(thumbnail);
             }

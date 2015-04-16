@@ -5,7 +5,14 @@
     <TextView
         android:id="@+id/text_item"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:gravity="center"/>
-
+    <TextView
+        android:id="@+id/desc_item"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_below="@+id/text_item"
+        android:textStyle="italic"
+        android:textColor="#FF0033"/>
 </RelativeLayout>

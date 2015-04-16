@@ -2,14 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.privatebox.com.privatebox" >
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="21"/>
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".MainApplication"
@@ -26,23 +35,37 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.AudioActivity" >
+        </activity>
+        <activity android:name=".Activity.GridViewActivity" >
+        </activity>
+        <activity android:name=".Activity.ValidationFormActivity" >
+        </activity>
+        <activity android:name=".Activity.ListViewActivity" >
+        </activity>
+        <activity android:name=".Activity.TakePictureActivity" >
+        </activity>
+        <activity android:name=".Activity.UploadDownloadActivity" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
-            android:name="app.privatebox.com.privatebox.Activity.AudioActivity">
+            android:name=".Activity.MapsActivity"
+            android:label="@string/title_activity_maps" >
         </activity>
         <activity
-            android:name="app.privatebox.com.privatebox.Activity.GridViewActivity">
+            android:name=".Activity.BasicActivity"
+            android:label="@string/title_activity_basic" >
         </activity>
         <activity
-            android:name="app.privatebox.com.privatebox.Activity.ValidationFormActivity">
-        </activity>
-        <activity
-            android:name="app.privatebox.com.privatebox.Activity.ListViewActivity">
-        </activity>
-        <activity
-            android:name="app.privatebox.com.privatebox.Activity.TakePictureActivity">
-        </activity>
-        <activity
-            android:name="app.privatebox.com.privatebox.Activity.UploadDownloadActivity">
+            android:name=".Activity.DesignActivity"
+            android:label="@string/title_activity_design" >
         </activity>
     </application>
 
